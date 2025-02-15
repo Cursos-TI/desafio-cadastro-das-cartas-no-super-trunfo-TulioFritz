@@ -15,7 +15,8 @@ int main() {
     int pontosturisticos;
 
     //CADASTRO DAS CARTAS
-
+    
+    printf("Desafio Super Trunfo - Países\n");
     printf("Digite o código da cidade: \n");
     scanf("%s", codigodacidade);
 
