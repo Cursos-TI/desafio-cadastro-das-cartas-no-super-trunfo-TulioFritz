@@ -17,6 +17,15 @@ int main() {
     float pib;
     int pontosturisticos;
 
+    //variáveis para a segunda carta
+    char estado2[100];
+    char codigodacidade2[5];
+    char nome2[100];
+    int populacao2;
+    float area2;
+    float pib2;
+    int pontosturisticos2;
+
     //CADASTRO DAS CARTAS
     printf("Digite o código da cidade: \n");
     scanf("%s", codigodacidade);
