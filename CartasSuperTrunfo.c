@@ -27,7 +27,7 @@ int main() {
     int pontosturisticos2;
 
     //CADASTRO DA PRIMEIRA CARTA
-    printf("\n---- Cadastro da 1ª Carta ----\n");
+    printf("\n--- Cadastro da 1ª Carta ---\n");
 
     printf("Digite o Estado: \n");
     scanf("%s", estado);
@@ -51,7 +51,7 @@ int main() {
     scanf("%d", &pontosturisticos);
 
     //CADASTRO DA SEGUNDA CARTA
-    printf("\n---- Cadastro da 2ª Carta ----\n");
+    printf("\n--- Cadastro da 2ª Carta ---\n");
 
     printf("Digite o Estado: \n");
     scanf("%s", estado2);
@@ -75,7 +75,7 @@ int main() {
     scanf("%d", &pontosturisticos2);
 
     //EXIBIÇÃO DOS DADOS
-    printf("\n---- Suas Cartas ----\n");
+    printf("\n--- Suas Cartas ---\n");
 
     printf("Carta 1: \n");
     printf("Estado: %s\n", estado);
