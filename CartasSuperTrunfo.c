@@ -7,7 +7,8 @@
 //Teste larissa
 
 int main() {
-    
+    //variavel do menu
+    int opcao;
     //variáveis para a primeira carta
     char estado[100];
     char codigodacidade[5];
@@ -31,8 +32,18 @@ int main() {
     float densidadepopulacional2;
     float pibpercapita2;
     float superpoder2;
-
+    //Menu Principal
+    printf("   |  BEM VINDO |\n");
+    printf("   |     AO     |\n");
+    printf("   |SUPER TRUNFO|\n");
+    printf("* Menu Principal *\n");
+    printf("1. Iniciar o Jogo\n");
+    printf("2. Regras\n");
+    printf("-Escolha uma opção-\n");
+    scanf("%d", &opcao);
     //CADASTRO DAS CARTAS
+    switch (opcao) {
+        case 1:
     printf("Digite o Estado: \n");
     scanf("%s", estado);
 
@@ -89,6 +100,8 @@ int main() {
     pibpercapita2 = (float) (pib2 + populacao2) / 2;
 
     superpoder2 = populacao2 + area2 + pib2 + pontosturisticos2 + pibpercapita2 + (1 / densidadepopulacional2);
+    break;
+    }
 
     //EXIBIÇÃO DOS DADOS
     printf("\n--- Suas Cartas ---\n");
