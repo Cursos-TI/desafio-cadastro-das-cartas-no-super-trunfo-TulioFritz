@@ -9,6 +9,7 @@
 int main() {
     //variavel do menu
     int opcao;
+    int comparacao;
     //variáveis para a primeira carta
     char estado[100];
     char codigodacidade[5];
@@ -32,18 +33,24 @@ int main() {
     float densidadepopulacional2;
     float pibpercapita2;
     float superpoder2;
+
     //Menu Principal
     printf("   |  BEM VINDO |\n");
     printf("   |     AO     |\n");
     printf("   |SUPER TRUNFO|\n");
-    printf("* Menu Principal *\n");
+    printf("\n* Menu Principal *\n");
     printf("1. Iniciar o Jogo\n");
     printf("2. Regras\n");
-    printf("-Escolha uma opção-\n");
+    printf("\n-Escolha uma opção-\n");
     scanf("%d", &opcao);
+
     //CADASTRO DAS CARTAS
+
     switch (opcao) {
         case 1:
+    
+    printf("--- Cadastro da 1ª Carta ---\n");
+
     printf("Digite o Estado: \n");
     scanf("%s", estado);
 
@@ -101,36 +108,30 @@ int main() {
 
     superpoder2 = populacao2 + area2 + pib2 + pontosturisticos2 + pibpercapita2 + (1 / densidadepopulacional2);
     break;
+        case 2:
+    printf("\n--- Explicação das Regras ---\n ");
+    printf("1- Cadastre duas cartas com suas respectivas informações.\n");
+    printf("2- Compare as cartas para saber quem vence!\n");
+    printf("*Explicação de como funciona a comparação de cartas*\n");
+    printf("Vence a carta com o maior valor no atributo escolhido. Porém, para a Densidade Demográfica, a regra inverte: vence a carta com o menor valor.\n");
+    break;
     }
-
-    //EXIBIÇÃO DOS DADOS
-    printf("\n--- Suas Cartas ---\n");
-
-    printf("\n Carta 1: \n");
-    printf("Estado: %s\n", estado);
-    printf("Codigo da cidade: %s\n", codigodacidade);
-    printf("Nome da cidade: %s\n", nome);
-    printf("População: %d\n", populacao);
-    printf("Área: %.2f km²\n", area);
-    printf("PIB: %.2f bilhões de reais\n",pib);
-    printf("Pontos turísticos: %d\n", pontosturisticos);
-    printf("Densidade Populacional: %.2f hab/km²\n", densidadepopulacional);
-    printf("PIB per Capita: %.2f reais\n", pibpercapita);
-
-    printf("\n Carta 2: \n");
-    printf("Estado: %s\n", estado2);
-    printf("Codigo da cidade: %s\n", codigodacidade2);
-    printf("Nome da cidade: %s\n", nome2);
-    printf("População: %d\n", populacao2);
-    printf("Área: %.2f km²\n", area);
-    printf("PIB: %.2f bilhões de reais\n", pib2);
-    printf("Pontos turísticos: %d\n", pontosturisticos2);
-    printf("Densidade Populacional: %.2f hab/km²\n", densidadepopulacional2);
-    printf("PIB per Capita: %.2f reais\n", pibpercapita2);
 
     //Comparação das cartas
     //Maior valor vence
+
     printf("\n---- Comparação de Cartas ----\n");
+    printf("\n1. População\n");
+    printf("2. Área\n");
+    printf("3. PIB\n");
+    printf("4. Pontos Turísticos\n");
+    printf("5. Densidade Demografica\n");
+    printf("\n|Escolha um atributo para comparar|\n");
+    scanf("%d", &comparacao);
+
+    switch (comparacao)
+
+    //comparação antiga abaixo
     if (populacao > populacao2){
         printf("\nPopulação: Carta 1 venceu!\n");
     }else {
@@ -172,6 +173,31 @@ int main() {
     }else {
         printf("Super Poder: Carta 2 venceu!\n");
     }
+
+    //EXIBIÇÃO DOS DADOS
+    //printf("\n--- Suas Cartas ---\n");
+
+    //printf("\n *Carta 1* \n");
+    //printf("Estado: %s\n", estado);
+    //printf("Codigo da cidade: %s\n", codigodacidade);
+    //printf("Nome da cidade: %s\n", nome);
+    //printf("População: %d\n", populacao);
+    //printf("Área: %.2f km²\n", area);
+    //printf("PIB: %.2f bilhões de reais\n",pib);
+    //printf("Pontos turísticos: %d\n", pontosturisticos);
+    //printf("Densidade Populacional: %.2f hab/km²\n", densidadepopulacional);
+    //printf("PIB per Capita: %.2f reais\n", pibpercapita);
+
+    //printf("\n *Carta 2* \n");
+    //printf("Estado: %s\n", estado2);
+    //printf("Codigo da cidade: %s\n", codigodacidade2);
+    //printf("Nome da cidade: %s\n", nome2);
+    //printf("População: %d\n", populacao2);
+    //printf("Área: %.2f km²\n", area);
+    //printf("PIB: %.2f bilhões de reais\n", pib2);
+    //printf("Pontos turísticos: %d\n", pontosturisticos2);
+    //printf("Densidade Populacional: %.2f hab/km²\n", densidadepopulacional2);
+    //printf("PIB per Capita: %.2f reais\n", pibpercapita2);
     
 
     return 0;
