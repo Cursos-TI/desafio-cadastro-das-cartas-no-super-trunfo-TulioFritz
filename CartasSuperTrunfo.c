@@ -114,7 +114,13 @@ int main() {
     printf("2- Compare as cartas para saber quem vence!\n");
     printf("*Explicação de como funciona a comparação de cartas*\n");
     printf("Vence a carta com o maior valor no atributo escolhido. Porém, para a Densidade Demográfica, a regra inverte: vence a carta com o menor valor.\n");
+    
+        return 0;
     break;
+        default:
+    printf("Opção Inválida!");
+    break;
+
     }
 
     //Comparação das cartas
@@ -129,50 +135,61 @@ int main() {
     printf("\n|Escolha um atributo para comparar|\n");
     scanf("%d", &comparacao);
 
-    switch (comparacao)
-
-    //comparação antiga abaixo
+    switch (comparacao) {
+        case 1:
+    
     if (populacao > populacao2){
         printf("\nPopulação: Carta 1 venceu!\n");
     }else {
         printf("\nPopulação: Carta 2 venceu!\n");
     }
-
+    break;
+        case 2:
     if (area > area2){
         printf("Área: Carta 1 venceu!\n");
     }else {
         printf("Área: Carta 2 venceu!\n");
     }
-    
+    break;
+        case 3:
     if (pib > pib2 ){
         printf("PIB: Carta 1 venceu!\n");
     }else {
         printf("PIB: Carta 2 venceu!\n");
     }
-    
+    break;
+        case 4:
     if (pontosturisticos > pontosturisticos2 ){
         printf("Pontos Turísticos: Carta 1 venceu!\n");
     }else {
         printf("Pontos Turísticos: Carta 2 venceu!\n");
     }
-    
+    break;
+        case 5:
     if (densidadepopulacional < densidadepopulacional2 ){
-        printf("Densidade Populacional: Carta 1 venceu!\n");
+        printf("Densidade Demográfica: Carta 1 venceu!\n");
     }else {
-        printf("Densidade Populacional: Carta 2 venceu!\n");
+        printf("Densidade Demográfica: Carta 2 venceu!\n");
+    }
+    break;
+        default:
+    printf("Opção Inválida!");
+    return 0;
+    break;
     }
     
-    if (pibpercapita > pibpercapita2){
-        printf("PIB per Capita: Carta 1 venceu!\n");
-    }else {
-        printf("PIB per Capita: Carta 2 venceu!\n");
-    }
+    //Apenas como "Backup"
+    //if (pibpercapita > pibpercapita2){
+        //printf("PIB per Capita: Carta 1 venceu!\n");
+    //}else {
+        //printf("PIB per Capita: Carta 2 venceu!\n");
+    //}
     
-    if (superpoder > superpoder2 ){
-        printf("Super Poder: Carta 1 venceu!\n");
-    }else {
-        printf("Super Poder: Carta 2 venceu!\n");
-    }
+    //if (superpoder > superpoder2 ){
+        //printf("Super Poder: Carta 1 venceu!\n");
+    //}else {
+        //printf("Super Poder: Carta 2 venceu!\n");
+    //} 
 
     //EXIBIÇÃO DOS DADOS
     //printf("\n--- Suas Cartas ---\n");
